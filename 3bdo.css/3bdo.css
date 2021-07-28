@@ -1,0 +1,230 @@
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container{
+    margin-right:auto;
+    margin-left:auto;
+    padding-left:15px;
+    padding-right: 15px;
+}
+body{
+    font-family: 'Lobster', cursive;
+}
+/* Small */
+@media(min-width:768px) and (max-width:991px){
+    .container {
+        width:750px
+    }
+}
+
+/* Medium */
+@media(min-width:992px) and (max-width:1199px){
+    .container {
+        width:970px
+    }
+}
+
+/* Large */
+@media(min-width:1200px){
+    .container {
+        width:1170px
+    }
+}
+header{
+    height: 50vh;
+    /* background-image: linear-gradient(
+45deg
+, #e1660f, #bd0d0d); */
+background-color: black;;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+header .stars{
+animation-name: flash;
+animation-iteration-count: infinite;
+animation-duration: 2s;
+animation-timing-function: linear ;
+
+}
+@media (max-width:768px){
+    header .stars .star-th, header .stars .star-fi{
+        display:none;
+    }
+}
+header .stars .star-o{
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    font-size: 3em;
+    color: white;
+}
+header .stars .star-t{
+    position: absolute;
+    font-size: 2em;
+    color: white;
+    left: 80px;
+    top: 200px;
+}
+header .stars .star-th{
+    position: absolute;
+    left: 300px;
+    bottom: 50px;
+    color: white;
+    font-size: 1.2em;
+}
+header .stars .star-f{
+    position: absolute;
+    right: 200px;
+    bottom: 100px;
+    color: white;
+    font-size: 1.5em;
+}
+header .stars .star-fi{
+    position: absolute;
+    left: 300px;
+    top: 30px;
+    font-size: 2em;
+    color: white;
+}
+/* animation start */
+@keyframes flash{
+    0% {opacity:100%}
+    100% {opacity:0%}
+}
+/* animation end  */
+header .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header .container .logo {
+    
+    width: 50%;
+    height: 25vh;
+    margin-top: 30px;
+}
+header .container .logo img{
+    
+    width: 100%;
+    height: 100%;
+}
+
+header .container .head-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+header .container .head-text .boo i{
+    position: absolute;
+    left: -415px;
+    color:white;
+    animation-name: boo;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 3turns ;
+}
+
+/* statrt animation  */
+@keyframes boo{
+0%{
+    transform: translatex(20px);
+}
+100%{
+    transform: translatex(1200px)
+}
+
+}
+/* end animation */
+header .container .head-text i{
+    font-size: 3em;
+    color: white;
+}
+header .container .head-text h1{
+    font-size: 3em;
+    filter: opacity(0.5);
+    color: #f20000;
+}
+@media(max-width:768px){
+    header .container .head-text h1{
+        font-size: 2em;
+    filter: opacity(0.5);
+    line-height: 5;
+}
+} 
+
+-----------
+section {
+margin-top:50px;
+}
+section .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+section .container .first{
+    border: 2px solid red;
+    box-shadow: 2px 2px 13px 0px red;
+    margin-bottom: 20px;
+}
+section .container .head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2em;
+    color: #fb2a2a;
+}
+section .container .head h4{
+
+}
+section .container .head-two{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -20px;
+    border-bottom: 2px solid red;
+    margin-bottom: 5px;
+}
+section .container .head-two h4{
+
+}
+section .container .vid{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+/* foooooooter */
+footer{
+    height: 30vh;
+    background-color: black;;
+}
+footer .container {
+
+}
+footer .container .foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+footer .container .foot h6 {
+    color: white;
+    font-size: 3em;
+}
+
+@media(max-width:768px){
+    footer .container .foot h6 {
+        color: white;
+        font-size: 2em;
+        
+    }
+    footer{
+        height: 20vh;
+        background-color: black;;
+    }
+}
